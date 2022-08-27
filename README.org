@@ -20,7 +20,7 @@ I have only tested this for Windows 10. There might be some bugs on Linux or Mac
 - Create a file called ~userChrome.css~ inside the ~chrome~ folder.
 - Copy and paste the contents of ~userChrome.css~ into your file.
 - Create a folder called ~titlebuttons~ inside the ~chrome~ folder.
-- Copy and paste the ~.svg~ files withing ~titlebuttons~ into the folder you created.
+- Download, then copy and paste the ~.svg~ files from within the ~titlebuttons~ folder into the folder you created.
 - Install the [[https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/][Tab Center Reborn]] extension.
 - Make sure to enable /"Allow this extension to run in Private windows"/ so you're not left stranded while browsing.
 - Go to ~about:addons~ in your URL bar, select *Tab Center Reborn*, go to
