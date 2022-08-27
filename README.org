@@ -35,3 +35,4 @@ I have only tested this for Windows 10. There might be some bugs on Linux or Mac
 ** Things to note
 - If the sidebar does not show up, you can press =Shitft-F1= to show the Tab Center Reborn sidebar directy. Or add the icon to your menubar through the customization menu.
 - In Fullscreen mode, the sidebar will collapse to a 0px wide border instead to be as unintrusive as possible. You can expand it by pushing your cursor all the way to the edge of the screen.
+- Use ctrl+T to create a new tab or double click in an empty area. Use ctrl+W to close out of your active tab.
