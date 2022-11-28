@@ -65,7 +65,7 @@
 @media (-moz-platform: windows-win10) {
     /* Hide main tabs toolbar */
     :root[tabsintitlebar]{
-        --uc-window-control-width: 110px; /* Space at the right of nav-bar for window controls */
+        --uc-window-control-width: 0px; /* Space at the left of nav-bar for menu controls */
         /* --uc-window-drag-space-width: 24px; */  /* To add extra window drag space in nav-bar */
     }
 
@@ -119,7 +119,7 @@
 
 /* General styles */
 #browser {
-    position: absolute;
+    position: relative;
 }
 
 #nav-bar, #urlbar {
@@ -206,11 +206,11 @@
 }
 
 #nav-bar{
-  border-left-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px));
-  border-right-width: var(--uc-window-drag-space-width,0px);
+  border-left-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px)); /* moves left side menu controls */
+  border-right-width: var(--uc-window-drag-space-width,110px); /* moves right side menu controls */
   margin-left: 0 !important;
 }
-.titlebar-buttonbox-container{
+/* .titlebar-buttonbox-container{
   -moz-box-ordinal-group: 0 !important;
   direction: rtl  !important;
-}
+} */
