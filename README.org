@@ -1,11 +1,11 @@
 * Firefox Vertical Tabs
-Vertical tabs for Firefox (119.0.1), inspired by Edge. Works with Dark theme, and System theme (auto dark mode) only.
+Vertical tabs for Firefox, inspired by Edge. Works with Dark theme, and System theme (auto dark mode) only.
 
 ** Screenshots
 [[./screenshots/firefox.png]]
 
 ** Compatibility
-*Guarateed compatibility with Firefox 104.*
+*Guarateed compatibility with Firefox 119.0.1*
 
 This theme is strictly meant for Windows 10, use on linux, mac or older windows OS may have unintended results.
 
