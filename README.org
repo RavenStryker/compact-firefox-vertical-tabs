@@ -2,7 +2,7 @@
 Vertical tabs for Firefox, inspired by Edge. Works with Dark theme, and System theme (auto dark mode) only.
 
 ** Screenshots
-[[./screenshots/firefox_tab_images.png]]
+[[./screenshots/firefox.png]]
 
 ** Compatibility
 *Guarateed compatibility with Firefox 104.*
