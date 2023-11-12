@@ -33,6 +33,7 @@ I have only tested this for Windows 10. There might be some bugs on Linux or Mac
 - Restart Firefox.
 
 ** Things to note
+- For those still having the white window controls, you need to choose the Dark theme from Themes (in about:addons), and not Settings.
 - If the sidebar does not show up, you can press =Shift + F1= to show the Tab Center Reborn sidebar directy. Or add the icon to your menubar through the customization menu.
 - In Fullscreen mode, the sidebar will collapse to a 0px wide border instead to be as unintrusive as possible. You can expand it by pushing your cursor all the way to the edge of the screen.
 - Use =ctrl + t= to create a new tab or double click in an empty area. Use =ctrl + w= to close out of your active tab.
