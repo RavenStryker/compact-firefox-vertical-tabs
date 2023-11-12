@@ -62,10 +62,11 @@
 }
 
 /* Windows specific styles */
-@media (-moz-platform: windows-win10) {
+@media (-moz-platform: windows),
+       (-moz-platform: windows-win10) {
     /* Hide main tabs toolbar */
     :root[tabsintitlebar]{
-        --uc-window-control-width: 0px; /* Space at the left of nav-bar for menu controls */
+        --uc-window-control-width: 0px; /* Space at the right of nav-bar for window controls */
         /* --uc-window-drag-space-width: 24px; */  /* To add extra window drag space in nav-bar */
     }
 
@@ -214,3 +215,7 @@
   -moz-box-ordinal-group: 0 !important;
   direction: rtl  !important;
 } */
+
+#sidebar-header {
+display: none !important;
+}
