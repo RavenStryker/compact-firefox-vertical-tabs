@@ -21,15 +21,12 @@ I have only tested this for Windows 10. There might be some bugs on Linux or Mac
 - Copy and paste the contents of ~userChrome.css~ into your file.
 - Create a folder called ~titlebuttons~ inside the ~chrome~ folder.
 - Download, then copy and paste the ~.svg~ files from within the ~titlebuttons~ folder into the folder you created.
-- Install the [[https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/][Tab Center Reborn]] extension.
+- Install the [[https://addons.mozilla.org/en-US/firefox/addon/sidebery/][Sidebery]] extension.
 - Make sure to enable /"Allow this extension to run in Private windows"/ so you're not left stranded while browsing.
-- Go to ~about:addons~ in your URL bar, select *Tab Center Reborn*, go to
-  *Preferences* and set:
-  - *Animations*: Off.
-  - *Use current browser theme*: On.
-  - *Compact Mode*: Enabled.
-  - *Favicon-only pinned tabs*: Off.
-  - Activate *Custom Stylesheet* and paste the contents of ~tabCenterReborn.css~ into the text area below, and click /"Save CSS"/ under the text box.
+- Go to ~about:addons~ in your URL bar, select *the three small dots next to Sidebery*
+  Click on *Help* in thye left navigation panel
+  - Import Addon Data
+  - Select the *sidebery-data.json* file located in this github
 - Restart Firefox.
 
 ** Things to note
