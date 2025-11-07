@@ -1,228 +1,77 @@
-/* change params at your taste and needs */
-/* put this script in userChrome.css in chrome folder in your profile folder /*
-/* sizing first */
-
-.titlebar-button>.toolbarbutton-icon {
-	height: 16px !important;
-	min-height: 16px !important;
-	width: 16px !important;
-	min-width: 16px !important;
+#TabsToolbar {
+  visibility: collapse !important;
 }
-
-.titlebar-button {
-	padding-left: 2px !important;
-	padding-right: 2px !important;
-	padding-top: 10px !important;
-}
-
-/*------changing icons ico, png or svg files */
-/* one for normal, one for hover to do a little anim */
-
-.titlebar-min {
-	list-style-image: url("titlebuttons/titlebutton-minimize.svg") !important;
-	background-color: none !important;
-}
-
-.titlebar-min:hover {
-	list-style-image: url("titlebuttons/titlebutton-minimize-hover.svg") !important;
-	background-color: transparent !important;
-}
-
-/* maximize button */
-.titlebar-max {
-	list-style-image: url("titlebuttons/titlebutton-maximize.svg") !important;
-	background-color: none !important;
-}
-
-.titlebar-max:hover {
-	list-style-image: url("titlebuttons/titlebutton-maximize-hover.svg") !important;
-	background-color: transparent !important;
-}
-
-/* restore button */
-.titlebar-restore {
-	list-style-image: url("titlebuttons/titlebutton-restore.svg") !important;
-	background-color: none !important;
-}
-
-.titlebar-restore:hover {
-	list-style-image: url("titlebuttons/titlebutton-restore-hover.svg") !important;
-	background-color: transparent !important;
-}
-
-/* close button */
-.titlebar-close {
-	list-style-image: url("titlebuttons/titlebutton-close.svg") !important;
-	background-color: none !important;
-}
-
-.titlebar-close:hover {
-	list-style-image: url("titlebuttons/titlebutton-close-hover.svg") !important;
-	background-color: transparent !important;
-}
-
-/* Windows specific styles */
-@media (-moz-platform: windows),
-       (-moz-platform: windows-win10) {
-    /* Hide main tabs toolbar */
-    :root[tabsintitlebar]{
-        --uc-window-control-width: 0px; /* Space at the right of nav-bar for window controls */
-        /* --uc-window-drag-space-width: 24px; */  /* To add extra window drag space in nav-bar */
-    }
-
-    #nav-bar{
-        border-inline: var(--uc-window-drag-space-width,80px) solid var(--toolbar-bgcolor) ;
-        border-inline-style: solid !important;
-        border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px));
-    }
-
-    :root:not([uidensity="compact"]) {
-        --uc-toolbar-height: 38px;
-    }
-	
-	:root {
-        --chrome-content-separator-color: none !important;
-    }
-
-    #TabsToolbar {
-        visibility: collapse !important;
-    }
-
-    :root:not([inFullscreen]) #nav-bar {
-        margin-top: calc(0px - var(--uc-toolbar-height));
-        z-index: 2;
-    }
-
-    #toolbar-menubar {
-        min-height: unset !important;
-        height: var(--uc-toolbar-height) !important;
-        position: relative;
-    }
-
-    /* For a rounded button design, uncomment both lines in .titlebar-buttonbox. */
-    .titlebar-buttonbox {
-        z-index: 3 !important;
-        /* padding-right:3px; */
-    }
-
-    .titlebar-buttonbox * {
-        /* border-radius: 5px; */
-        width: 35px;
-        height: 38px;
-        pointer-events: auto;
-    }
-
-    #titlebar {
-        z-index: 3;
-        pointer-events: none;
-    }
-
-    #toolbar-menubar[inactive] > #menubar-items {
-        opacity: 0;
-        pointer-events: none;
-        margin-left: var(--uc-window-drag-space-width,0px);
-    }
-}
-
-
-/* General styles */
-#browser {
-    position: relative;
-}
-
-#nav-bar, #urlbar {
-    z-index: 100;
-}
-
-#sidebar-box:not([lwt-sidebar]){
-    appearance: unset !important;
-}
-
-#sidebar-box[sidebarcommand*="tabcenter"] {
-    z-index: 1;
-}
-
-#sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header {
-    visibility: collapse;
-    display: none;
-}
-
-[sidebarcommand*="tabcenter"] #sidebar {
-    min-width: 250px !important;
-    max-width: 250px !important;
-}
-
-#sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-right: 1px solid var(--sidebar-border-color: #1c1b22);
-    z-index: 10 !important;
-    top: 0;
-    bottom: 0;
-}
-
-#main-window[inFullscreen] #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
-    min-width: 0px;
-    max-width: 0px;
-}
-
-[sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
-    display: none;
-}
-
-[sidebarcommand*="tabcenter"] #sidebar {
-    max-height: 100%;
-    height: 100%;
-}
-
-#main-window:not([inFullscreen]) #sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) ~ #appcontent {
-    margin-left: var(--positionX1);
-}
-
-#main-window[inFullscreen][inDOMFullscreen] #appcontent {
-    margin-left: 0;
-}
-
-#main-window[inFullscreen] #sidebar {
-    height: 100vh;
-}
-
-[sidebarcommand*="tabcenter"] #sidebar-header {
-    background: #0C0C0D;
-    border-bottom: none !important;
-}
-
-[sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
-    border-right-color: #0C0C0D !important;
-    border-left-color: #0C0C0D !important;
-}
-
-[sidebarcommand*="tabcenter"] #sidebar-switcher-target,
-[sidebarcommand*="tabcenter"] #sidebar-close {
-    filter: invert(100%);
-}
-
-@media (max-width: 630px) {
-    #urlbar-container {
-        min-width: 100% !important;
-    }
-
-    #menubar-items {
-        display: none !important;
-    }
-}
-
-#nav-bar{
-  border-left-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px)); /* moves left side menu controls */
-  border-right-width: var(--uc-window-drag-space-width,110px); /* moves right side menu controls */
-  margin-left: 0 !important;
-}
-/* .titlebar-buttonbox-container{
-  -moz-box-ordinal-group: 0 !important;
-  direction: rtl  !important;
-} */
-
 #sidebar-header {
-display: none !important;
+  display: none;
+}
+#titlebar {
+  -moz-box-ordinal-group: 100 !important;
+}
+.titlebar-buttonbox-container {
+  visibility: visible !important;
+  display: flex !important;
+}
+
+/* --- BUTTON & ICON STYLING --- */
+/* 1. Style the parent button (the clickable area) */
+.titlebar-button {
+  -moz-appearance: none !important;
+  appearance: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 46px;
+  height: 32px;
+  background-color: transparent !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* 2. Apply a hover effect to the BUTTON's background */
+.titlebar-button:hover {
+  background-color: rgba(128, 128, 128, 0.2) !important;
+}
+#close-button:hover {
+  background-color: rgba(232, 17, 35, 0.9) !important;
+}
+.titlebar-button::before {
+  content: "" !important;
+}
+.titlebar-button {
+  width: 46px;
+  height: 46px;
+}
+
+/* --- CUSTOM SVG ICONS --- */
+/* Minimize Button */
+.titlebar-min {
+  background-image: url("titlebuttons/titlebutton-minimize.svg") !important;
+}
+.titlebar-min:hover {
+  background-image: url("titlebuttons/titlebutton-minimize-hover.svg") !important;
+}
+
+/* Maximize Button */
+.titlebar-max {
+  background-image: url("titlebuttons/titlebutton-maximize.svg") !important;
+}
+.titlebar-max:hover {
+  background-image: url("titlebuttons/titlebutton-maximize-hover.svg") !important;
+}
+
+/* Restore Button (when window is maximized) */
+.titlebar-restore {
+  background-image: url("titlebuttons/titlebutton-restore.svg") !important;
+}
+.titlebar-restore:hover {
+  background-image: url("titlebuttons/titlebutton-restore-hover.svg") !important;
+}
+
+/* Close Button */
+.titlebar-close {
+  background-image: url("titlebuttons/titlebutton-close.svg") !important;
+}
+.titlebar-close:hover {
+  background-image: url("titlebuttons/titlebutton-close-hover.svg") !important;
 }
